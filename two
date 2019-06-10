@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jun 10 17:04:55 2019
+
+@author: geass
+"""
+
+number_of_testcase = int(input("what is the nnumber of testcase = " ))
+for i in range(number_of_testcase):
+    n=int(input("number of elements in a test = " ))
+    k=int(input("sum to be decided= "))
+    arr = []
+    for _ in range(n):
+        x = int(input())
+        arr.append(x)
+    count = 0
+    for i in range(n-1):
+        for j in range(n-1-i):
+            if (k==arr[i]+arr[i+j+1]):
+                count=count+1
+    print(count)
+            
+        
+        
