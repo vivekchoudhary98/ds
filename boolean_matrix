@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jun 11 13:09:31 2019
+
+@author: geass
+"""
+
+number_of_testcase = int(input("what is the nnumber of testcase = " ))
+for i in range(number_of_testcase):
+    r=int(input("length of matrix row"))
+    c=int(input("length of matrix colummn"))
+    arr = [[0 for i in range(c)] for j in range(r)] 
+    print(arr)
+    for i in range(r):
+        for j in range(c):
+            arr[i][j]=int(input())
+    print (arr)
+    a = [[0 for i in range(c)] for j in range(r)] 
+    for i in range(r):
+        for j in range(c):
+            if(arr[i][j]==1):
+                for k in range(r):
+                    a[k][j]=1
+                for l in range(c):
+                    a[i][l]=1
+                break
+    print(a)
