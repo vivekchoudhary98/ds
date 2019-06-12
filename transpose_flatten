@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jun 12 18:16:12 2019
+
+@author: geass
+"""
+
+import numpy
+def trans(arr):
+    my_array = numpy.array(arr,int)
+    a= numpy.transpose(my_array)
+    return a
+def flat(arr):
+    myarray=numpy.array(arr,int)
+    b=myarray.flatten()
+    return b
+n, m = map(int, input().split())
+arr =list(input().strip().split() for _ in range(n))
+result1=trans(arr)
+result2=flat(arr)
+print(result1)
+print(result2)
+
+
+
+
